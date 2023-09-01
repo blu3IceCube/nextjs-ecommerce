@@ -113,6 +113,7 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
                       disabled={loading}
                       placeholder="Store name"
                       {...field}
+                      autoComplete="off"
                     />
                   </FormControl>
                   <FormMessage />

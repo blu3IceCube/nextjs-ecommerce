@@ -71,6 +71,7 @@ export const StoreModal = () => {
                         disabled={loading}
                         placeholder="E-Commerce"
                         {...field}
+                        autoComplete="off"
                       />
                     </FormControl>
                     {/* <FormDescription></FormDescription> */}
