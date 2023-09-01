@@ -1,5 +1,13 @@
+import { BillboardClient } from "./component/client";
+
 const BillboardPage = () => {
-  return <div>Billboard Page.</div>;
+  return (
+    <div className="flex-col">
+      <div className="flex-1 space-y-4 p-8 py-6">
+        <BillboardClient />
+      </div>
+    </div>
+  );
 };
 
 export default BillboardPage;
