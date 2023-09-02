@@ -18,7 +18,7 @@ const Navbar = async () => {
   });
 
   return (
-    <div className="border-b">
+    <div className="border-b sticky bg-slate-200 z-500">
       <div className="flex h-16 items-center px-4">
         <StoreSwitcher items={stores} />
         <MainNav className="mx-6" />
