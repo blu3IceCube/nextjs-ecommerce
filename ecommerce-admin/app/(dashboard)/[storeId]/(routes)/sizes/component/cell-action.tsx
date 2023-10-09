@@ -38,7 +38,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
       router.refresh();
       toast.success("Size deleted");
     } catch (error) {
-      toast.error("Make sure you removed all produxts using this sizes first.");
+      toast.error("Make sure you removed all products using this sizes first.");
     } finally {
       setLoading(false);
       setOpen(false);

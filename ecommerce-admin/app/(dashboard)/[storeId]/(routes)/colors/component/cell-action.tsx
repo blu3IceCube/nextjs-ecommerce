@@ -28,17 +28,17 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
 
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success("Size Id copied to the clipboard.");
+    toast.success("Color Id copied to the clipboard.");
   };
 
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/${params.storeId}/sizes/${data.id}`);
+      await axios.delete(`/api/${params.storeId}/colors/${data.id}`);
       router.refresh();
-      toast.success("Size deleted");
+      toast.success("Color deleted");
     } catch (error) {
-      toast.error("Make sure you removed all produxts using this sizes first.");
+      toast.error("Make sure you removed all products using this color first.");
     } finally {
       setLoading(false);
       setOpen(false);
@@ -67,7 +67,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
             Copy Id
           </DropdownMenuItem>
           <DropdownMenuItem
-            onClick={() => router.push(`/${params.storeId}/sizes/${data.id}`)}
+            onClick={() => router.push(`/${params.storeId}/colors/${data.id}`)}
           >
             <Edit className="mr-2 h-4 w-4" />
             Update
